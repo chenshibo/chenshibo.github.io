@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>QQ</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<link href="SUI/sm.min.css" rel="stylesheet" />
+		<style type="text/css">
+			#btn-title {
+				width: 35%;
+				margin: 0 auto;
+			}
+			
+			#ab-page,#msg-page,#dt-page {
+				animation: none !important;
+				-webkit-animation: none !important;
+			}
+		</style>
+	</head>
+	
+	<body>
+
+		<div class="page-group theme-dark">
+
+			<!--消息页面-->
+			<div class="page page-current " id="msg-page">
+				<!--导航栏-->
+				<header class="bar bar-nav">
+					<a class="icon icon-me pull-left open-panel" date-panel='#info-panel'></a>
+					<a class="pull-right">十</a>
+					<div class="buttons-row" id="btn-title">
+						<a href="" class="tab-link button active">消息</a>
+						<a href="" class="tab-link button">电话</a>
+					</div>
+				</header>
+
+
+				<!--工具栏-->
+
+				<nav class="bar bar-tab">
+					<a class="tab-item active">
+						<span class="icon icon-message"></span>
+						<span class="tab-label">消息</span>
+						<span class="badge">99+</span>
+					</a>
+					<a class="tab-item " href="#ab-page">
+						<span class="icon icon-friends"></span>
+						<span class="tab-label">联系人</span>
+					</a>
+					<a class="tab-item" href="#dt-page">
+						<span class="icon icon-star"></span>
+						<span class="tab-label">动态</span>
+					</a>
+				</nav>
+
+				<!--页面内容-->
+
+				<div class="content">
+					<div class="content-block">
+						这里是好友列表
+					</div>
+				</div>
+
+			</div>
+
+			<!--联系人页面-->
+
+			<div class="page" id="ab-page">
+				<!--导航栏-->
+				<header class="bar bar-nav">
+					<a class="icon icon-me pull-left open-panel" date-panel='#info-panel'></a>
+					<button class="button button-link button-nav pull-right">添加</button>
+					<h1 class="title">联系人</h1>
+				</header>
+
+				<nav class="bar bar-tab">
+					<a class="tab-item" href="#msg-page">
+						<span class="icon icon-message"></span>
+						<span class="tab-label">消息</span>
+						<span class="badge">99+</span>
+					</a>
+					<a class="tab-item active">
+						<span class="icon icon-friends active"></span>
+						<span class="tab-label">联系人</span>
+					</a>
+					<a class="tab-item" href="#dt-page">
+						<span class="icon icon-star"></span>
+						<span class="tab-label">动态</span>
+					</a>
+				</nav>
+				<!--页面内容-->
+				<div class="content">
+					<div class="content-block">
+						这里是联系人页面
+					</div>
+				</div>
+
+			</div>
+
+			<!--动态页面-->
+
+			<div class="page" id="dt-page">
+				<!--导航栏-->
+				<header class="bar bar-nav">
+					<a class="icon icon-me pull-left open-panel" date-panel='#info-panel'></a>
+					<button class="button button-link button-nav pull-right">更多</button>
+					<h1 class="title">动态</h1>
+				</header>
+
+				<!--工具栏-->
+
+				<nav class="bar bar-tab">
+					<a class="tab-item" href="#msg-page">
+						<span class="icon icon-message"></span>
+						<span class="tab-label">消息</span>
+						<span class="badge">99+</span>
+					</a>
+					<a class="tab-item" href="#ab-page">
+						<span class="icon icon-friends"></span>
+						<span class="tab-label">联系人</span>
+					</a>
+					<a class="tab-item active">
+						<span class="icon icon-star"></span>
+						<span class="tab-label">动态</span>
+					</a>
+				</nav>
+
+				<!--页面内容-->
+
+				<div class="content">
+					<div class="content-block">
+						动态
+					</div>
+				</div>
+			</div>
+			
+			<!--侧边栏-->
+			<div class="panel panel-left panel-reveal" id="info-panel">
+				<div class="content-block ">
+				    <div id="self-info">
+				    	<img src="" id="self-head"/>
+				    	
+				    </div>
+				</div>
+			</div>
+				
+
+			<!---->	
+		</div>
+	</body>
+
+	<script src="SUI/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="SUI/sm.min.js" type="text/javascript" charset="utf-8"></script>
+
+	<script>
+		//URL第一个#后面的字符串是url的哈希值，hash不会随请求发送到服务器
+		//仅仅是指导浏览器当页面加载完成时显示页面的哪个部分
+
+		//window.location.hash可以访问当前页面的哈希值
+		//window.onhashchange事件可以监听哈希的变化   
+
+		//初始化SUI
+		
+	
+		
+		$(document).on('pageInit','#msg-page',function(e,pageID,$page){
+			console.log(111)
+			document.title = '消息'
+		});
+		
+		$(document).on('pageInit','#ab-page',function(e,pageID,$page){
+			document.title = '联系人'
+		});
+		
+		$(document).on('pageInit','#dt-page',function(e,pageID,$page){
+			document.title = '动态'
+		});
+		
+		
+		$.init();
+	</script>
+
+</html>
