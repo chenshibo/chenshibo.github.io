@@ -16,6 +16,28 @@
 				animation: none !important;
 				-webkit-animation: none !important;
 			}
+			#self-info img{
+				width: 3rem;
+				height: 3rem;
+				border-radius:50% ;
+				float: left;
+			}
+			#self-name{
+				float: left;
+			}
+			#self-ul{
+				background: none;
+			}
+		
+			#self-ul:before{
+				content: none !important;
+			}
+			#self-ul:after{
+				content: none !important;
+			}
+			#self-ul>li>div:after{
+				content: none !important;
+			}
 		</style>
 	</head>
 	
@@ -139,8 +161,70 @@
 			<div class="panel panel-left panel-reveal" id="info-panel">
 				<div class="content-block ">
 				    <div id="self-info">
-				    	<img src="" id="self-head"/>
+				    	<img src="img/head.jpg" id="self-head"/>
+				    	<span id="self-name">我的昵称</span>
+				    	<br />
 				    	
+				    	<div id="self-level">
+				    	</div>
+				    	<div style="clear: both;"></div>
+				    	
+				    	<p>今天捡了100块钱</p>
+				    	<!--列表-->
+				    	<div class="list-block">
+				    	
+				    	 	<ul id="self-ul">
+				    	 		<li class="item-content">
+				    	 			<div class="item-media">
+				    	 				<i class="icon icon-gift"></i>
+				    	 			</div>
+				    	 			<div class="item-inner">
+				    	 				<div class="item-title">我的超级会员</div>
+				    	 			</div>
+				    	 		</li>
+				    	 		<li class="item-content">
+				    	 			<div class="item-media">
+				    	 				<i class="icon icon-picture"></i>
+				    	 			</div>
+				    	 			<div class="item-inner">
+				    	 				<div class="item-title">QQ钱包</div>
+				    	 			</div>
+				    	 		</li>
+				    	 		<li class="item-content">
+				    	 			<div class="item-media">
+				    	 				<i class="icon icon-app"></i>
+				    	 			</div>
+				    	 			<div class="item-inner">
+				    	 				<div class="item-title">个性装扮</div>
+				    	 			</div>
+				    	 		</li>
+				    	 		<li class="item-content">
+				    	 			<div class="item-media">
+				    	 				<i class="icon icon-star"></i>
+				    	 			</div>
+				    	 			<div class="item-inner">
+				    	 				<div class="item-title">我的收藏</div>
+				    	 			</div>
+				    	 		</li>
+				    	 		<li class="item-content">
+				    	 			<div class="item-media">
+				    	 				<i class="icon icon-picture"></i>
+				    	 			</div>
+				    	 			<div class="item-inner">
+				    	 				<div class="item-title">我的相册</div>
+				    	 			</div>
+				    	 		</li>
+				    	 		<li class="item-content">
+				    	 			<div class="item-media">
+				    	 				<i class="icon icon-code"></i>
+				    	 			</div>
+				    	 			<div class="item-inner">
+				    	 				<div class="item-title">我的文件</div>
+				    	 			</div>
+				    	 		</li>
+				    	 	</ul>
+				    	 	
+				    	</div>
 				    </div>
 				</div>
 			</div>
@@ -179,6 +263,51 @@
 		
 		
 		$.init();
+		
+		
+		var myLevel = 63;
+		
+		 function  refershlevel(level) {
+		 	
+		 	var levArray = []; 
+		 	
+		 	while (level/4 >= 1 ){
+		 		
+				var remainder = level%4;
+				levArray.unshift(remainder)
+				level =  Math.floor(level/4);
+		 	}
+		 	
+		 	levArray.unshift(level);
+		 	
+		 	for (var i=0;i<levArray.length;i++) {
+		 		var picName;
+		 		switch (levArray.length-i){
+		 			case 3:
+		 				picName = 'sun.jpg';
+		 				break;
+		 			case 2:
+		 				picName = 'moon.jpg';
+		 				break;
+		 			case 1:
+		 				picName = 'star.jpg';
+		 				break;	
+		 			default:
+		 				break;
+		 		}
+		 		
+		 		for (var j = 0; j<levArray[i]; j++) {
+		 			
+		 			$('<img/>').attr('src','img/'+picName)
+		 					  .css('width','0.8rem')
+		 					  .css('height','0.8rem')
+		 					  .appendTo($('#self-level'))
+		 		}
+		 	}	
+		 }
+
+		refershlevel(myLevel)
+		
 	</script>
 
 </html>
