@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>QQ</title>
@@ -12,38 +13,49 @@
 				margin: 0 auto;
 			}
 			
-			#ab-page,#msg-page,#dt-page {
+			#ab-page,
+			#msg-page,
+			#dt-page {
 				animation: none !important;
 				-webkit-animation: none !important;
 			}
-			#self-info img{
+			
+			#self-info img {
 				width: 3rem;
 				height: 3rem;
-				border-radius:50% ;
+				border-radius: 50%;
 				float: left;
 			}
-			#self-name{
+			
+			#self-name {
 				float: left;
 			}
-			#self-ul{
+			
+			#self-ul {
 				background: none;
 			}
-		
-			#self-ul:before{
+			
+			#self-ul:before {
 				content: none !important;
 			}
-			#self-ul:after{
+			
+			#self-ul:after {
 				content: none !important;
 			}
-			#self-ul>li>div:after{
+			
+			#self-ul>li>div:after {
 				content: none !important;
+			}
+			
+			#bottom-menu {
+				font-size: 0.8rem;
 			}
 		</style>
 	</head>
-	
+
 	<body>
 
-		<div class="page-group theme-dark">
+		<div class="page-group">
 
 			<!--消息页面-->
 			<div class="page page-current " id="msg-page">
@@ -56,7 +68,6 @@
 						<a href="" class="tab-link button">电话</a>
 					</div>
 				</header>
-
 
 				<!--工具栏-->
 
@@ -76,11 +87,83 @@
 					</a>
 				</nav>
 
+				<div class="bar bar-header-secondary">
+					<div class="searchbar">
+						<a class="searchbar-cancel">取消</a>
+						<div class="search-input">
+							<label class="icon icon-search" for="search"></label>
+							<input type="search" id='search' placeholder='输入关键字...' />
+						</div>
+					</div>
+				</div>
+
 				<!--页面内容-->
 
 				<div class="content">
 					<div class="content-block">
-						这里是好友列表
+						<div class="list-block contacts-block">
+							<div class="list-group">
+								<ul>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题1</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题2</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题3</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题4</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题5</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题6</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题7</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题8</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							
+						</div>
 					</div>
 				</div>
 
@@ -111,10 +194,87 @@
 						<span class="tab-label">动态</span>
 					</a>
 				</nav>
+				<div class="bar bar-header-secondary">
+					<div class="searchbar">
+						<a class="searchbar-cancel">取消</a>
+						<div class="search-input">
+							<label class="icon icon-search" for="search"></label>
+							<input type="search" id='search' placeholder='输入关键字...' />
+						</div>
+					</div>
+				</div>
+
 				<!--页面内容-->
 				<div class="content">
 					<div class="content-block">
-						这里是联系人页面
+						<div class="content">
+					<div class="content-block">
+						<div class="list-block contacts-block">
+							<div class="list-group">
+								<ul>
+									<li class="list-group-title" onclick="openclose(event)" style="color: darkgray;">我的好友</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题1</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题2</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题3</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题4</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题5</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题6</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题7</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="item-content">
+											<div class="item-inner">
+												<div class="item-title">标题8</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
 					</div>
 				</div>
 
@@ -147,6 +307,15 @@
 						<span class="tab-label">动态</span>
 					</a>
 				</nav>
+				<div class="bar bar-header-secondary">
+					<div class="searchbar">
+						<a class="searchbar-cancel">取消</a>
+						<div class="search-input">
+							<label class="icon icon-search" for="search"></label>
+							<input type="search" id='search' placeholder='输入关键字...' />
+						</div>
+					</div>
+				</div>
 
 				<!--页面内容-->
 
@@ -156,81 +325,107 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<!--侧边栏-->
-			<div class="panel panel-left panel-reveal" id="info-panel">
+			<div class="panel panel-left panel-reveal theme-white" id="info-panel">
 				<div class="content-block ">
-				    <div id="self-info">
-				    	<img src="img/head.jpg" id="self-head"/>
-				    	<span id="self-name">我的昵称</span>
-				    	<br />
-				    	
-				    	<div id="self-level">
-				    	</div>
-				    	<div style="clear: both;"></div>
-				    	
-				    	<p>今天捡了100块钱</p>
-				    	<!--列表-->
-				    	<div class="list-block">
-				    	
-				    	 	<ul id="self-ul">
-				    	 		<li class="item-content">
-				    	 			<div class="item-media">
-				    	 				<i class="icon icon-gift"></i>
-				    	 			</div>
-				    	 			<div class="item-inner">
-				    	 				<div class="item-title">我的超级会员</div>
-				    	 			</div>
-				    	 		</li>
-				    	 		<li class="item-content">
-				    	 			<div class="item-media">
-				    	 				<i class="icon icon-picture"></i>
-				    	 			</div>
-				    	 			<div class="item-inner">
-				    	 				<div class="item-title">QQ钱包</div>
-				    	 			</div>
-				    	 		</li>
-				    	 		<li class="item-content">
-				    	 			<div class="item-media">
-				    	 				<i class="icon icon-app"></i>
-				    	 			</div>
-				    	 			<div class="item-inner">
-				    	 				<div class="item-title">个性装扮</div>
-				    	 			</div>
-				    	 		</li>
-				    	 		<li class="item-content">
-				    	 			<div class="item-media">
-				    	 				<i class="icon icon-star"></i>
-				    	 			</div>
-				    	 			<div class="item-inner">
-				    	 				<div class="item-title">我的收藏</div>
-				    	 			</div>
-				    	 		</li>
-				    	 		<li class="item-content">
-				    	 			<div class="item-media">
-				    	 				<i class="icon icon-picture"></i>
-				    	 			</div>
-				    	 			<div class="item-inner">
-				    	 				<div class="item-title">我的相册</div>
-				    	 			</div>
-				    	 		</li>
-				    	 		<li class="item-content">
-				    	 			<div class="item-media">
-				    	 				<i class="icon icon-code"></i>
-				    	 			</div>
-				    	 			<div class="item-inner">
-				    	 				<div class="item-title">我的文件</div>
-				    	 			</div>
-				    	 		</li>
-				    	 	</ul>
-				    	 	
-				    	</div>
-				    </div>
+					<div id="self-info">
+						<img src="img/head.jpg" id="self-head" />
+						<span id="self-name">我的昵称</span>
+						<br />
+
+						<div id="self-level">
+						</div>
+						<div style="clear: both;"></div>
+
+						<p>今天捡了100块钱</p>
+						<!--列表-->
+						<div class="list-block">
+
+							<ul id="self-ul">
+								<li class="item-content">
+									<div class="item-media">
+										<i class="icon icon-gift"></i>
+									</div>
+									<div class="item-inner">
+										<div class="item-title">我的超级会员</div>
+									</div>
+								</li>
+								<li class="item-content">
+									<div class="item-media">
+										<i class="icon icon-picture"></i>
+									</div>
+									<div class="item-inner">
+										<div class="item-title">QQ钱包</div>
+									</div>
+								</li>
+								<li class="item-content">
+									<div class="item-media">
+										<i class="icon icon-app"></i>
+									</div>
+									<div class="item-inner">
+										<div class="item-title">个性装扮</div>
+									</div>
+								</li>
+								<li class="item-content">
+									<div class="item-media">
+										<i class="icon icon-star"></i>
+									</div>
+									<div class="item-inner">
+										<div class="item-title">我的收藏</div>
+									</div>
+								</li>
+								<li class="item-content">
+									<div class="item-media">
+										<i class="icon icon-picture"></i>
+									</div>
+									<div class="item-inner">
+										<div class="item-title">我的相册</div>
+									</div>
+								</li>
+								<li class="item-content">
+									<div class="item-media">
+										<i class="icon icon-code"></i>
+									</div>
+									<div class="item-inner">
+										<div class="item-title">我的文件</div>
+									</div>
+								</li>
+								<li class="item-content">
+									<div class="item-media">
+										<i class="icon icon-code"></i>
+									</div>
+									<div class="item-inner">
+										<div class="item-title">我的文件</div>
+									</div>
+								</li>
+							</ul>
+
+						</div>
+
+						<div class="row" id="bottom-menu">
+							<div class="col-33">
+								<a class="button-link">
+									<i class="icon icon-settings">设置</i>
+								</a>
+							</div>
+							<div class="col-33">
+								<a class="button-link" id="night-shift-btn">
+									<i class="icon icon-star">夜间</i>
+								</a>
+							</div>
+							<div class="col-33">
+								<a class="button-link">
+									郑州<sup>18℃</sup>
+								</a>
+							</div>
+
+						</div>
+					</div>
 				</div>
 			</div>
-				
 
-			<!---->	
+			<!---->
 		</div>
 	</body>
 
@@ -244,70 +439,94 @@
 		//window.location.hash可以访问当前页面的哈希值
 		//window.onhashchange事件可以监听哈希的变化   
 
-		//初始化SUI
 		
-	
-		
-		$(document).on('pageInit','#msg-page',function(e,pageID,$page){
+
+		$(document).on('pageInit', '#msg-page', function(e, pageID, $page) {
 			console.log(111)
 			document.title = '消息'
 		});
-		
-		$(document).on('pageInit','#ab-page',function(e,pageID,$page){
+
+		$(document).on('pageInit', '#ab-page', function(e, pageID, $page) {
 			document.title = '联系人'
 		});
-		
-		$(document).on('pageInit','#dt-page',function(e,pageID,$page){
+
+		$(document).on('pageInit', '#dt-page', function(e, pageID, $page) {
 			document.title = '动态'
 		});
+
 		
-		
-		$.init();
-		
-		
+
 		var myLevel = 63;
-		
-		 function  refershlevel(level) {
-		 	
-		 	var levArray = []; 
-		 	
-		 	while (level/4 >= 1 ){
-		 		
-				var remainder = level%4;
+
+		function refershlevel(level) {
+
+			var levArray = [];
+
+			while(level / 4 >= 1) {
+
+				var remainder = level % 4;
 				levArray.unshift(remainder)
-				level =  Math.floor(level/4);
-		 	}
-		 	
-		 	levArray.unshift(level);
-		 	
-		 	for (var i=0;i<levArray.length;i++) {
-		 		var picName;
-		 		switch (levArray.length-i){
-		 			case 3:
-		 				picName = 'sun.jpg';
-		 				break;
-		 			case 2:
-		 				picName = 'moon.jpg';
-		 				break;
-		 			case 1:
-		 				picName = 'star.jpg';
-		 				break;	
-		 			default:
-		 				break;
-		 		}
-		 		
-		 		for (var j = 0; j<levArray[i]; j++) {
-		 			
-		 			$('<img/>').attr('src','img/'+picName)
-		 					  .css('width','0.8rem')
-		 					  .css('height','0.8rem')
-		 					  .appendTo($('#self-level'))
-		 		}
-		 	}	
-		 }
+				level = Math.floor(level / 4);
+			}
+
+			levArray.unshift(level);
+
+			for(var i = 0; i < levArray.length; i++) {
+				var picName;
+				switch(levArray.length - i) {
+					case 3:
+						picName = 'sun.jpg';
+						break;
+					case 2:
+						picName = 'moon.jpg';
+						break;
+					case 1:
+						picName = 'star.jpg';
+						break;
+					default:
+						break;
+				}
+
+				for(var j = 0; j < levArray[i]; j++) {
+
+					$('<img/>').attr('src', 'img/' + picName)
+						.css('width', '0.8rem')
+						.css('height', '0.8rem')
+						.appendTo($('#self-level'))
+				}
+			}
+		}
 
 		refershlevel(myLevel)
+
+		$('#night-shift-btn').click(function() {
+			$(document.body).toggleClass('theme-dark');
+			$('#info-panel').toggleClass('theme-white');
+		})
 		
+		
+		function openclose(e) {
+			if (e.target.isOpen) {
+				$(e.target).nextAll('li')
+						   .css('display','none')				
+						 
+				e.target.isOpen = false;
+				
+			} else{
+				e.target.isOpen = true;
+				$(e.target).nextAll('li')
+						   .css('display','block')				
+						 
+			}
+		
+		}
+		
+		
+		
+		
+		
+		//初始化SUI
+		$.init();
 	</script>
 
 </html>
