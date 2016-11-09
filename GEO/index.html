@@ -5,9 +5,7 @@
 		<title></title>
 	</head>
 	<body>
-	
-		<p>111</p>	
-
+		
 		<p id="latitude">纬度</p>
 		
 		<p id="longitude">经度</p>
@@ -30,9 +28,9 @@
 		
 		navigator.geolocation.getCurrentPosition(function (position) {
 			
-			lati.innerHTML = "经度:"+position.coords.latitude;
+			lati.innerHTML = "纬度:"+position.coords.latitude;
 			
-			lont.innerHTML = "纬度:"+position.coords.longitude;
+			lont.innerHTML = "经度:"+position.coords.longitude;
 			
 			
 		})
